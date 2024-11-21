@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tleukhan's Webpage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">Tleukhan Mussin</div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="projects.html" class="active">Projects</a> <!-- Active state for Projects page -->
+            <a href="publications.html">Publications</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Project Details Section -->
+<div class="project-details container">
+    <h1>NUSense: Robust Soft Optical Tactile Sensor</h1>
+
+    <!-- Links to GitHub and Publication -->
+    <div class="project-links">
+        <a href="444" target="_blank" class="link-button">
+            View on GitHub
+        </a>
+        <a href="444" target="_blank" class="link-button">
+            View Publication
+        </a>
+    </div>
+     
+    <!-- New Image Container -->
+     <img src="project3/image.png" alt="Event-based Agile Object Catching" class="project2-details-image">
+
+    <p class="project-date">Project Date: May 29, 2023</p>
+
+    <p>
+        In this project, we explore the use of event-based cameras to classify hand gestures. The model used for this project is Graph Neural Networks.
+    </p>
+
+    <h2>Event Preprocessing Summary</h2>
+    <p>The event preprocessing pipeline for DVS (Dynamic Vision Sensor) data converts raw, continuous event streams into a structured, graph-based format suitable for 
+        Graph Neural Networks (GNNs). Here’s a summary of each stage:</p>
+
+    <h3>1. Denoising</h3>
+    <p>Isolated, noisy events are removed by applying a space-time filter. This step eliminates spurious events that don't have nearby events in space and time, 
+        improving data quality and reducing the likelihood of overfitting.</p>
+
+    <img src="project3/Denoising.png" alt="Denoising Process" class="inline-image">
+
+    <h3>2. Time Window Selection</h3>
+    <p>The continuous event stream is divided into small, fixed-duration time windows. Each time window captures the events occurring within that timeframe, 
+        effectively segmenting the stream into discrete chunks. Each time window serves as a snapshot, which becomes the basis for creating a separate graph.</p>
+
+    <img src="project3/TimeWindow.png" alt="Denoising Process" class="inline-image">
+
+    <h3>3. Sub-sampling and Time Normalization</h3>
+    <p>Within each time window, events are sub-sampled to reduce data density and computational load. Time normalization is then applied to standardize the 
+        temporal scale across windows, ensuring consistency in the time representation for each graph.</p>
+
+    <img src="project3/SubSampling.png" alt="Denoising Process" class="inline-image">
+
+    <h3>4. Edge Creation</h3>
+    <p>Events within each time window are connected to form a graph. A radius-neighborhood algorithm creates edges between nodes (events) that are spatially and temporally close within the window. 
+        This captures local spatio-temporal relationships among events in that timeframe.</p>
+
+    <p>The result is a sequence of graphs, each representing the spatio-temporal structure of events within a single time window. 
+        This graph sequence enables the GNN to learn dynamic patterns across time, making it effective for tasks like gesture recognition in event-based vision systems.</p>
+
+    <h2>Graph Neural Network (GNN) Summary</h4>
+    <p>Graph Neural Networks (GNNs) extend the concept of traditional Convolutional Neural Networks (CNNs) to work with data represented as graphs, rather than on grid-like data such as images. Unlike CNNs, which apply convolutional operations on a regular grid, GNNs use a graph structure with nodes (vertices) and edges that represent relationships between the data points. Here’s a breakdown of the core concepts and architecture in GNNs:</p>
+
+    <img src="project3/Architecture.png" alt="Denoising Process" class="inline-image">
+    
+    <h3>1. Graph Structure</h3>
+    <p>In a graph <code>G = (V, E)</code>, <code>V</code> represents the nodes (individual data points or entities), and <code>E</code> represents the edges, which define relationships between the nodes. The structure of the graph is represented by an adjacency matrix, which indicates whether nodes are connected and may include edge weights or types to represent the strength or type of relationships.</p>
+
+    <h3>2. Node and Edge Features</h3>
+    <p>Each node has a feature vector that encodes information about that node. These feature vectors are combined into a node feature matrix, and similarly, edge feature vectors (if present) are combined into an edge feature matrix. This representation allows GNNs to capture node-specific and edge-specific information.</p>
+
+    <h3>3. Graph Convolutional Layers</h3>
+    <p>The core operation in GNNs includes two main steps: <strong>aggregation</strong> and <strong>updating</strong>.</p>
+    <ul>
+        <li><strong>Aggregation</strong>: Each node collects feature information from its neighboring nodes through message passing. This step ensures that the node's representation incorporates relevant information from its surroundings, capturing local structure.</li>
+        <li><strong>Updating</strong>: The aggregated information is then transformed, often through a neural layer with learnable parameters, to update the node's feature vector. This step may change the dimensionality of the node embeddings, creating higher-level feature representations with each layer.</li>
+    </ul>
+
+    <h3>4. Pooling and Readout</h3>
+    <p>In GNNs, pooling layers are used to reduce the graph's size by clustering nodes or sub-graphs, which helps retain important structural information. This process is critical for obtaining a graph-level representation.</p>
+    <p>The <strong>readout</strong> operation aggregates the node-level embeddings to produce a fixed-size graph representation. This step enables GNNs to perform graph-level tasks, such as classification, by transforming the entire graph into a single representation vector.</p>
+
+    <h3>5. Model Architecture</h3>
+    <p>The architecture generally includes multiple graph convolutional layers, often followed by pooling layers and a Multi-Layer Perceptron (MLP) for classification or regression. GNNs can perform tasks at different levels: node-level, edge-level, and graph-level predictions, depending on the application requirements.</p>
+
+    <p>By iteratively processing local neighborhoods through multiple layers, GNNs capture both local and global patterns within the graph. This property makes GNNs especially suitable for applications involving non-grid data structures, such as social networks, molecular structures, and event-based vision systems.</p>
+
+    <h2>Technologies Used</h2>
+    <ul>
+        <li>Event-based Vision Sensors</li>
+        <li>Graph Neural Network (GNN)</li>
+        <li>PyTorch Geometric</li>
+        <li>Graph Attention Network v2 (GATv2)</li>
+        <li>Muceptron</li>
+    </ul>
+
+    <h2>Project Gallery</h2>
+    <div class="project-gallery">
+        <img src="project2/euclidean_distances.png" alt="Robot Catching Object" class="gallery-image">
+        <img src="project2/assemble sensor1.png" alt="Event-based Vision in Action" class="gallery-image">
+        <img src="project2/control_points_image2.png" alt="High-Speed Object Detection" class="gallery-image">
+    </div>
+
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tleukhan's Webpage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">Tleukhan Mussin</div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="projects.html" class="active">Projects</a> <!-- Active state for Projects page -->
+            <a href="publications.html">Publications</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Project Details Section -->
+<div class="project-details container">
+    <h1>NUSense: Robust Soft Optical Tactile Sensor</h1>
+
+    <!-- Links to GitHub and Publication -->
+    <div class="project-links">
+        <a href="https://github.com/TleukhanDMussin/NuSenseMain" target="_blank" class="link-button">
+            View on GitHub
+        </a>
+        <a href="https://arxiv.org/abs/2410.23516" target="_blank" class="link-button">
+            View Publication
+        </a>
+    </div>
+     
+    <!-- New Image Container -->
+     <img src="project2/fig1_hope.png" alt="Event-based Agile Object Catching" class="project2-details-image">
+
+    <p class="project-date">Project Date: May, 2024</p>
+
+    <p>
+        The paper introduces "NUSense," a robust optical tactile sensor designed to enhance robotic tactile sensing through the detection of shear strain. Traditional tactile sensors often focus on measuring pressure, 
+        but NUSense uses a silicone rubber pad dyed with color inks to capture shear deformation, providing a deeper understanding of tactile interactions. This sensor works by visually detecting surface elongations 
+        under mechanical load using a camera, which captures changes in the color pattern of the silicone pad.
+    </p>
+
+    <p>
+        
+        The image processing algorithm in NUSense plays a crucial role in interpreting tactile information from visual data. When the silicone rubber pad experiences deformation due to external forces, 
+        it generates distinct color changes that are captured by an integrated camera. The sensor’s LEDs provide uniform lighting, ensuring consistent and clear images. The algorithm then processes these images to 
+        detect and quantify shear strain by analyzing changes in color patterns.
+    </p>
+
+    <p>
+        First, the captured image is preprocessed to remove noise and enhance contrast, making the color shifts more distinguishable. The algorithm identifies regions with color deformation and tracks these changes 
+        over time, which correlates with the applied force and movement. By mapping these color changes across the surface of the sensor, the system can accurately determine the magnitude and direction of shear strain. 
+        This method allows NUSense to translate complex tactile interactions into actionable data, which the robot can use to make precise adjustments during manipulation tasks. 
+        The robustness of this image processing algorithm ensures the sensor remains sensitive to subtle tactile changes, enabling high-resolution feedback.
+    </p>
+
+    <p>
+        The experimental results show that NUSense can measure normal forces accurately, localize single contacts, and detect the orientation of edges. 
+        The sensor's robustness is demonstrated through repeated load tests and edge detection experiments, showing minimal drift and consistent performance even under varying conditions. 
+        This novel approach makes NUSense suitable for complex robotic manipulation tasks where high tactile precision and durability are essential.
+    </p>
+
+    <h2>Technologies Used</h2>
+    <ul>
+        <li>Novel Robust Optical Tactile Sensor</li>
+        <li>Fisheye Camera</li>
+        <li>Python for Algorithm Development</li>
+        <li>ATI Force-Torque Sensor</li>
+        <li>3D Printed Parts for Sensor Holding</li>
+    </ul>
+
+    <h2>Project Gallery</h2>
+    <div class="project-gallery">
+        <img src="project2/euclidean_distances.png" alt="Robot Catching Object" class="gallery-image">
+        <img src="project2/assemble sensor1.png" alt="Event-based Vision in Action" class="gallery-image">
+        <img src="project2/control_points_image2.png" alt="High-Speed Object Detection" class="gallery-image">
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tleukhan's Webpage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">Tleukhan Mussin</div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="projects.html" class="active">Projects</a> <!-- Active state for Projects page -->
+            <a href="publications.html">Publications</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Project Details Section -->
+<div class="project-details container">
+    <h1>Action-Driven Tactile Object Recognition using Silver Nanowire Injected Sensors</h1>
+
+    <!-- Links to GitHub and Publication -->
+    <div class="project-links">
+        <a href="https://github.com/TleukhanDMussin/Allegro-Hand-with-markers" target="_blank" class="link-button">
+            View on GitHub
+        </a>
+        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=epJJrHsAAAAJ&citation_for_view=epJJrHsAAAAJ:u-x6o8ySG0sC" target="_blank" class="link-button">
+            View Publication
+        </a>
+    </div>
+     
+    <!-- New Image Container -->
+    <div class="project-images">
+        <img src="project1/Picture_Home.png" 
+             alt="Robot with tactile sensors" 
+             class="project-details-image">
+        <img src="project1/Picture_Grab.png" 
+             alt="Supporting Image for Project" 
+             class="project-details-image">
+    </div>
+
+    <p class="project-date">Project Date: May 29, 2023</p>
+
+    <h2>Project Overview</h2>
+    <p>
+        This project explores a novel action-driven tactile object recognition approach using advanced silver nanowire-injected sensors. The primary goal is to enable a robot to recognize and reconstruct object shapes by leveraging tactile feedback through repeated grasps. Unlike traditional vision-based methods, this approach emphasizes haptic perception to improve the robot’s ability to interact with and understand various objects in low-visibility or cluttered environments.
+    </p>
+
+    <h2>Methodology</h2>
+    <p>
+        The tactile sensors are created by injecting silver nanowires into a flexible foam layer, allowing the sensors to detect pressure changes based on resistance variations. These sensors are integrated into the fingertips of a robotic hand, equipped with a custom-built, Arduino-controlled data acquisition unit for resistance data collection. The collected data is processed through the Robot Operating System (ROS) for real-time feedback.
+    </p>
+
+    <h3>Exploration and Shape Recognition Process</h3>
+    <p>
+        To recognize shapes, the robot employs a series of pre-defined grasps, each designed to interact with different parts of the object. When the robot makes contact with the object, the tactile sensors register pressure changes, generating data points that form a "tactile point cloud." By repeating this grasping process, the robot gradually builds a comprehensive tactile map of the object's surface.
+    </p>
+
+    <p>
+        The system classifies four basic shapes—cube, cylinder, pyramid, and sphere—using only three tripod grasps. The tripod grasp involves three fingers pressing at specified points, optimizing contact and pressure distribution across the object’s surface to generate unique pressure patterns corresponding to each shape.
+    </p>
+
+    <h2>Results and Findings</h2>
+    <p>
+        The tactile recognition system achieved a remarkable 98% accuracy rate in distinguishing between the four target shapes. This success highlights the efficacy of silver nanowire-injected sensors in capturing fine-grained tactile information, even with minimal grasps. The sensors’ flexibility and responsiveness enabled the system to detect subtle shape nuances, a critical factor for high-precision tactile sensing.
+    </p>
+
+    <p>
+        The tactile sensors, protected by a silicone layer, demonstrated robust performance across various object sizes. The experiments revealed that the silicone layer not only safeguarded the sensors from wear but also enhanced sensitivity by providing uniform pressure distribution, ensuring reliable and repeatable measurements.
+    </p>
+
+    <h3>Key Advantages</h3>
+    <ul>
+        <li><strong>Low Power Consumption:</strong> The use of silver nanowires allows for minimal power requirements, making it feasible for battery-operated or mobile robotic systems.</li>
+        <li><strong>Enhanced Durability:</strong> The silicone-protected sensors showed excellent durability, maintaining accuracy over prolonged use.</li>
+        <li><strong>High Accuracy:</strong> The action-driven approach combined with precise sensor feedback resulted in a nearly 100% recognition rate for basic shapes.</li>
+    </ul>
+
+    <h2>Technologies Used</h2>
+    <ul>
+        <li>Silver Nanowire-Injected Tactile Sensors</li>
+        <li>Robot Operating System (ROS)</li>
+        <li>Arduino Microcontroller for Data Acquisition</li>
+        <li>3D Printing for Object Fabrication</li>
+        <li>Servo Motor-Controlled Translational Mechanism</li>
+    </ul>
+
+    <h2>Project Gallery</h2>
+    <div class="project-gallery">
+        <img src="project1/Cylinder_final-_online-video-cutter.com_.gif" alt="Robot Catching Object" class="gallery-image">
+        <img src="project1/Picture_Algorithm.png" alt="Event-based Vision in Action" class="gallery-image">
+        <img src="project1/Screenshot 2024-10-24 at 20.36.47.png" alt="High-Speed Object Detection" class="gallery-image">
+    </div>
+
+</div>
+
+</body>
+</html>
