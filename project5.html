@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tleukhan's Webpage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">Tleukhan Mussin</div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="projects.html" class="active">Projects</a> <!-- Active state for Projects page -->
+            <a href="publications.html">Publications</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Project Details Section -->
+<div class="project-details container">
+    <h1>Kazakh Letter Recognition System</h1>
+
+    <!-- Links to GitHub and Publication -->
+    <div class="project-links">
+        <a href="https://github.com/TleukhanDMussin/Kazakh_Letter_Recognition" target="_blank" class="link-button">
+            View on GitHub
+        </a>
+    </div>
+     
+    <!-- New Image Container -->
+     <img src="project5/Screenshot 2024-11-22 at 16.12.58.png" alt="Event-based Agile Object Catching" class="project2-details-image">
+
+    <p class="project-date">Project Date: December, 2023</p>
+
+    <h3>1. Problem and Motivation</h3>
+    <p>
+        The project, "Kazakh Letters Recognition with CNN", tackles the challenge of recognizing handwritten Kazakh letters, a problem unexplored due to the absence of suitable datasets. 
+        Existing technologies lack the capability to process these characters, requiring a custom approach to address this gap. Recognizing handwritten Kazakh letters has significant implications for advancing 
+        Kazakh-language technology and improving accessibility.
+    </p>
+
+    <h3>2. Dataset</h3>
+    <p>
+        To overcome the lack of available datasets, we created our own. We collected data from 144 participants, who contributed a total of 1,296 handwritten characters over 6 hours. 
+        The dataset underwent preprocessing, where the images were converted to grayscale, segmented into 150x150 regions, and divided into training, validation, and test sets.
+    </p>
+
+
+    <h3>3. Model</h3>
+    A 2D Convolutional Neural Network (CNN) was developed to identify patterns in the handwritten letters. The model architecture consisted of convolutional layers for feature extraction, max-pooling layers for dimensionality reduction, 
+    and a final softmax-activated dense layer for classification into 9 distinct classes.
+
+    <p>
+        The model was trained on the custom dataset and evaluated using a confusion matrix to measure classification accuracy across all classes. 
+        Further individual image testing demonstrated the model's robustness and capability to generalize to new inputs. This comprehensive evaluation confirmed the model's effectiveness in recognizing Kazakh handwritten letters.
+    </p>
+
+    <h2>Technologies Used</h2>
+    <ul>
+        <li>TensorFlow/Keras</li>
+        <li>OpenCV for YOLO</li>
+        <li>Custom Dataset</li>
+    </ul>
+
+    <h2>Project Gallery</h2>
+    <div class="project-gallery">
+        <img src="project5/Screenshot 2024-11-22 at 16.11.09.png" alt="Robot Catching Object" class="gallery-image">
+        <img src="project5/Screenshot 2024-11-22 at 16.13.21.png" alt="Event-based Vision in Action" class="gallery-image">
+        <img src="project5/Screenshot 2024-11-22 at 16.13.41.png" alt="High-Speed Object Detection" class="gallery-image">
+    </div>
+
+</div>
+
+</body>
+</html>
