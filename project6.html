@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tleukhan's Webpage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">Tleukhan Mussin</div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="cv.html">CV</a>
+            <a href="projects.html" class="active">Projects</a> <!-- Active state for Projects page -->
+            <a href="publications.html">Publications</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Project Details Section -->
+<div class="project-details container">
+    <h1>NeuroFeel</h1>
+
+    <!-- Links to GitHub and Publication -->
+     
+    <!-- New Image Container -->
+     <img src="project6/Screenshot 2024-11-22 at 16.35.54.png" alt="Event-based Agile Object Catching" class="project2-details-image">
+
+    <p class="project-date">Project Date: Ongoing</p>
+
+    <h3>1. Problem and Motivation</h3>
+    <p>
+        Existing tactile sensors are limited in dynamic responsiveness, real-time tracking, and effective force feedback, particularly in applications requiring both sensitivity and robustness. 
+        This project aims to address these gaps by leveraging event-based vision systems and biomimicry of mechanoreceptors.
+    </p>
+
+    <h3>2. Design</h3>
+    <p>
+        The NeuroFeel sensor integrates slow-adaptive (SA) and fast-adaptive (FA) biomimetic features to capture constant and transient forces accurately. A soft hemispherical silicone pad with embedded reflective markers is at the center of the design, 
+        providing real-time spatial and temporal feedback. Event-based cameras are employed to track changes in marker positions, significantly reducing latency and memory usage compared to traditional frame-based cameras. 
+    </p>
+
+
+    <h3>3. Directions</h3>
+    Further enhancements to the NeuroFeel system include optimizing the silicone tip to reduce buckling effects, improving calibration methods for shear forces and torsion, and miniaturizing the sensor for broader applications.
+
+    <h2>Technologies Used</h2>
+    <ul>
+        <li>Event Based Camera DVS 356</li>
+        <li>ROS Software for Event Based Cameras</li>
+        <li>Silicone Markers</li>
+    </ul>
+
+    <h2>Project Gallery</h2>
+    <div class="project-gallery">
+        <img src="project6/Screenshot 2024-11-22 at 16.36.18.png" alt="Robot Catching Object" class="gallery-image">
+        <img src="project6/Screenshot 2024-11-22 at 16.35.54.png" alt="Event-based Vision in Action" class="gallery-image">
+    </div>
+
+</div>
+
+</body>
+</html>
